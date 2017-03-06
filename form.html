@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Form Validation</title>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div  class="container">
+      <form class="form-horizontal" method="post" onsubmit="return formValidate();"> 
+          <h2>Registration Form</h2>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">User Name</label>
+              <div class="col-sm-9">
+                <input type="text" name="username" placeholder="User Name" class="form-control" autofocus>
+                <span class="error-block" id="username"></span>
+              </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Password</label>
+              <div class="col-sm-9">
+                <input type="password" name="pass" placeholder="Password" class="form-control">
+                <span class="error-block" id="pass"></span>
+              </div>
+          </div>
+        
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Confirm Password</label>
+              <div class="col-sm-9">
+                <input type="password" name="confirmPass" placeholder="Confirm Password" class="form-control">
+                <span class="error-block" id="confirmpass"></span>
+              </div>
+          </div>
+        
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Email</label>
+            <div class="col-sm-9">
+              <input type="email" name="email" placeholder="Email" class="form-control">
+              <span class="error-block" id="email"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Mobile</label>  
+            <div class="col-sm-9">
+              <input type="text" name="mobile" placeholder="Mobile" class="form-control">
+              <span class="error-block" id="mobile"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Date of Birth</label>
+            <div class="col-sm-9">
+               <input type="date" name="birthDate" class="form-control">
+               <span class="error-block" id="dob"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="country" class="col-sm-3 control-label">Country</label>
+              <div class="col-sm-9">
+                <select id="country" class="form-control">
+                  <option value='-1'>--Select Country--</option>
+                  <option value='1'>India</option>
+                  <option value='2'>Austria</option>
+                  <option value='3'>Brazil</option>
+                  <option value='4'>China</option>
+                  <option value='5'>France</option>
+                  <option value='6'>Indonesia</option>
+                </select>
+                <span class="error-block" id="country"></span>
+              </div>
+          </div> 
+
+          <div class="form-group">
+            <label class="control-label col-sm-3">Gender</label>
+            <div class="col-sm-6">
+              <div class="row">
+                <div class="col-sm-4">
+                  <label class="radio-inline">
+                    <input type="radio" name="gender" value="Female">Female
+                  </label>
+                </div>
+                <div class="col-sm-4">
+                  <label class="radio-inline">
+                    <input type="radio" name="gender" value="Male">Male
+                  </label>
+                </div>
+                <div class="col-sm-4">
+                    <label class="radio-inline">
+                      <input type="radio" name="gender" value="Unknown">Unknown
+                    </label>
+                </div>
+              </div>
+              <span class="error-block" id="gender"></span>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <div class="col-sm-9 col-sm-offset-3">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="terms">I accept terms
+                  <span class="error-block"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-9 col-sm-offset-3">
+              <button type="submit" class="btn btn-primary btn-block" class="form-control">Submit Form</button>
+            </div>
+          </div>
+
+      </form>
+    <div>
+
+    <script type="text/javascript" src="myScript.js"></script>
+</body>
+</html>
